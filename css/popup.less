@@ -1,0 +1,260 @@
+// out: ../css/popup.css
+
+
+
+@lightColor: #fff;
+@darkColor: #000;
+@primaryColor: #1665c4;
+@greyColor: #e6e6e6;
+
+@fontLight: 400;
+
+::selection {
+    color: #1665c4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 20px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: @greyColor;
+}
+
+
+/**------------------------------------------------------------------------------------------------------------*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    border: transparent;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 6px;
+    font-size: 10px;
+    padding: 0.8rem 2rem;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+div.category {
+  margin-bottom: 4rem;
+
+  .item {
+    display: flex;
+    align-items: baseline;
+    input {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    label {
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 700;
+        color: @darkColor;
+        opacity: 0.75;
+        margin-left: 0.5rem;
+        margin-bottom: 0.5rem;
+        &:hover {
+          cursor: pointer;
+        }
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+    font-weight: @fontLight;
+  }
+
+  ul {
+    display: block;
+    font-size: 0.9rem;
+    margin: 0.2rem 0 0.5rem 0;
+    padding: 0.2rem 1.3rem 0.5rem;
+  }
+}
+
+textarea {
+    border-radius: 6px;
+    border-color: #aaa;
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.3rem;
+    resize: none;
+    &:focus {
+        border-color: @primaryColor;
+    }
+}
+
+
+
+html {
+    overflow: hidden;
+
+    body {
+        width: 400px;
+        height: 675px;
+        background-color: @lightColor;
+
+        header {
+            grid-area: header;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: @lightColor;
+            border-bottom: 1px solid @greyColor;
+            padding: 1rem 0.5rem;
+
+            .grid {
+                display: grid;
+                height: 100%;
+                grid-template-areas: "head";
+                .block-logo {
+                  grid-area: head;
+                  text-align: center;
+                  align-self: center;
+                  justify-self: center;
+                  img {
+                      width: 75%;
+                  }
+
+                  h4 {
+                      text-align: center;
+                      font-size: 0.8rem;
+                      color: @primaryColor;
+                      font-weight: 700;
+                      margin-top: 0;
+                  }
+                }
+
+                .block-icon {
+                  grid-area: head;
+                  align-self: start;
+                  justify-self: end;
+                  i {
+                    opacity: 0.7;
+                    &:hover {
+                      cursor: pointer;
+                    }
+                  }
+                }
+            }
+        }
+
+
+        /**=======================================================*/
+
+        main {
+            position: fixed;
+            top: 6rem;
+            width: 100%;
+            height: 75%;
+            padding: 1rem;
+            padding-bottom: 0;
+            overflow-y: scroll;
+
+            #category-default {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: space-between;
+              margin-bottom: 2rem;
+              align-items: center;
+              label {
+                margin-left: 0;
+                margin-bottom: 0;
+                h4 {
+                  font-weight: 500;
+                  font-size: 1.1rem;
+                }
+              }
+
+              select {
+                width: 7rem;
+                background: aliceblue;
+                border: none;
+                border-radius: 0.3rem;
+                padding: 0.5rem 0.5rem;
+                cursor: pointer;
+                option {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            #txtarea-clipboard {
+              pointer-events: none;
+              background: aliceblue;
+              border: none;
+              font-size: 0.7rem;
+              overflow: hidden;
+              &:focus-visible {
+                outline: none;
+              }
+            }
+
+            .end {
+              text-align: center;
+              a {
+                color: @darkColor;
+                opacity: 0.5;
+                text-decoration: none;
+                padding: 0.2rem;
+                &:hover {
+                  cursor: default;
+                }
+              }
+            }
+        }
+
+
+        /**=======================================================*/
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 2rem;
+            background-color: @lightColor;
+            border-top: 1px solid #e6e6e6;
+
+            .block-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0;
+
+                #btn-cancel {
+                    border: 1px solid rgba(0, 0, 0, 0.09);
+                    background-color: @lightColor;
+                    color: @primaryColor;
+                    &:hover {
+                        border-color: @primaryColor;
+                    }
+                }
+
+                #btn-done {
+                    background-color: @primaryColor;
+                    color: @lightColor;
+                    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+                    &:hover {
+                        /* background-color: #fff;
+                        color: #1665c4; */
+                        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+                    }
+                }
+            }
+        }
+    }
+}

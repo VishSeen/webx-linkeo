@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/popup.css">
+    <title>Linkeo Extension CQ Site</title>
+</head>
+
+
+
+<body>
+    <header>
+        <div class="grid">
+            <div class="block-logo">
+                <img src="img/logo.png" alt="Linkeo logo">
+                <h4 class="logo-sub">
+                    CONTRÔLE QUALITÉ
+                </h4>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="block-content">
+            <div id="category-default">
+                <label for="select-status">
+                  <h4>Validation site :</h4>
+               </label>
+                <select id="select-status" required>
+                  <option value="valide">Validé</option>
+                  <option value="refuse">Refusé</option>
+               </select>
+            </div>
+
+            <!-- .category represent a block of data from the google sheet
+                where every line of text represents a checkbox as .item
+                simply copy this structure if you need to add more checks -->
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                        <h4>TRAME</h4>
+                    </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                        <p>Ideoconfig</p>
+                    </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                        <p>Contenu.html</p>
+                    </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                        <p>Ticket maitre/Inté/Design</p>
+                    </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+            <!-- =================== END OF A CATEGORY ============== -->
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                        <h4>MODULES/WEB OPTIONS</h4>
+                    </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                        <p>Vérification présence Modules sur le Front</p>
+                    </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                        <p>Vérification bon utilisation du module Deliver et Planner(rubrique,text+cta a optimiser)</p>
+                    </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                        <p>Calltracking</p>
+                    </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                        <h4>VALIDATEUR</h4>
+                    </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Vérification - Lien Test Validateur Intégrateur/Designer + Commentaire</p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Vérification remontés validateur - Problème et Alerte</p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>LIGHTHOUSE</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Capture du Résultat</p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Corrections + commentaires si le résultat du test n'est pas plus de 85% partout</p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Capture nouveau test</p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>FONCTIONNEL</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Bug</p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Scroll</p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Souci d'affichage</p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Error 404</p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>META</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Vérification meta tag via REF APP</p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Passage sur Screaming Frog</p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>DESIGN</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Design pro - l’aspect général du site
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        L’intégration du logo dans la barre de navigation est correcte
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        La hiérarchie visuelle des contenus des pages
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Adaptation activité client
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Transition sur les éléments tels que les images, logo, boutons et hyperliens.
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>COULEURS</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Choix de couleur client</p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>Adaptation couleurs logo vs site</p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>MISE EN PAGE</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Mise en page Pro
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Utilisation template LP pour les pages clients
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>IMAGES/VIDÉOS</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Vidéo bandeau - Image par défaut
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Format vidéo bandeau
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Logo et Picto Logo (Poids et dimension)
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Qualité images
+                    </p>
+                 </label>
+                </div>
+
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Poids images
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Dimension globale des images face à leur taille d’affichage(bandeau/vignettes/contenu/
+parallax/logo/picto logo/favicon/puces)
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Alt images
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>POLICE</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        3 polices maximum(Vérification Front/Admin)
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Import Format Police(Vérification Admin)
+                    </p>
+                    </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>LIGHTBOX</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Pas de lighbox sur Image générique
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Lighbox sur image client de bonne qualité
+                    </p>
+                    </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>ACCESSIBILITÉ</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Contenu illisible/invisible
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>FORMULAIRE</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Pas de formulaire transparent sur fond d'image
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Modèle formulaire adapté à l'activité du client
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Largeur du formulaire qui ne prend pas toute la largeur de la page
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>PATTERN</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Utilisation pattern vs image lourds
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>MULTILINGUE</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Check texte FR sur site EN et vice versa
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Check des liens
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Option langue dispo sur desktop et responsive
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Alt image adéquat sur chaque langue
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Option langue dispo sur desktop et responsive
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>LOREM IPSUM</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Texte latin par défaut sur le site
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>RESPONSIVE</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Vérification mobile, tablette, laptop, large et xx-large
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>RÉSEAUX SOCIAUX</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Picto RS
+                    </p>
+                 </label>
+                </div>
+
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Lien RS fonctionnel et correcte
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Couleurs pictos correcte et visible
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Rajout éléments RS ticket design
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Esthétisme et format des éléments RS du ticket design
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>FAVICON</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Favicon visible layout home et content
+                    </p>
+                 </label>
+                </div>
+
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Favicon en accord avec l'activité du client
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Dimension favicon ne dépassant pas 32px X 32px
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>ADMIN/BUILDER</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Installation Modules Admin/Builder
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Mdp accès client à l'admin fonctionnel
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Class inadéquat (Vérification Admin)
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Class inutile (Vérification Admin)
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Utilisation abusive d'!important
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Présence Webmaster Tools sur les sites en refonte
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Mélange section-idéal et sectionideal2
+                    </p>
+                 </label>
+                </div>
+
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Code commenté
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>SPÉCIFICITÉ INTERNATIONAL</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Le format de l'adresse
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Pas de webcallback pour US/CAN
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Mention Courriel a vérifier.(pas de 'email')
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Pas de mention Appel Gratuit dans le prefooter
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Mention Soumission a vérifier dépendant de l'activité du client. Pas de mention Devis pour CAN.
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Pas de rubriques et sous rubriques en Italic - spécificité canada
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Menu top et menu footer: CAN/EN,FR,ES, USA et AUS, en langue Anglaise mettre toutes les premières lettre de chaque mot en proper case, à l'exeption des mots de liaison tel que ""and"" i.e.
+                        Contact Us, About Us, Site Map, Term and Conditions etc
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>COHÉRENCE CTA</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Cohérence bouton cta entre version responsive et desktop
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Version desktop: bouton de contact en tant que primary action CTA sur le topbar.
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Bouton primary action CTA visible en full(icone + mention Contactez-nous/Rappel Gratuit)
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Couleur de fond différent pour les CTA primary action et les autres CTA du site. <br>
+                        *Si le primary action est un bouton de contact on peut avoir la meme couleur de fond pour les autres bouton de contact <br>
+                        *Si le primary action est un bouton de wcb les autres cta doivent définitivement avoir une autre couleur.
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Pas de WCB sur responsive.
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Suppression rubrique Contactez-nous du menutop si celui-ci fait office de doublon avec
+le primary action cta. Au cas contraire on laisse la rubrique tel quel.
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>Site FR/AUS</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Si option appel en primary cta on place WCB en desktop et le bouton Appel(Call)
+an tant que primary sur responsive et on place le bouton de Contact a la place du
+bouton Appel(Call)
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>Site CAN/US</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Si option appel en primary on place le bouton Appel(Call) sur desktop et responsive et
+on place le bouton contact a la place du bouton Appel(Call)
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>COHÉRENCE DES BOUTONS CTA DELIVER/PLANNER</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Sur layout home, on enlève le bouton commander/réserver/rdv etc sur le bandeau car déjà présent sur le topbar.
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        On remplace le bouton du bandeau par un bouton de scroll down qui doit ramener vers le h1
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Sur layout content on enlève le bouton commander/réserver/rdv etc sur le bandeau car elle est
+généralement en dessous du primary button qui se trouve sur le topbar.
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        On enlève la rubrique Commander du topbar.
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Sur pages LP on garde l’encart commander qui est à droite dans la première section de contenu.
+                    </p>
+                 </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        On termine les pages client + lp avec une sectionideal2-cta en fin de page.
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+
+
+            <div class="category">
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                   <h4>COMMENTAIRES</h4>
+                </label>
+                </div>
+
+                <div class="item">
+                    <input type="checkbox">
+                    <label>
+                    <p>
+                        Voir fichier compressé/captures d'écran en pièce jointe pour des corrections supplémentaires à apporter.
+                    </p>
+                 </label>
+                </div>
+                <textarea name="extra-comments" rows="4" placeholder="Votre commentaire supplémentaire..."></textarea>
+            </div>
+        </div>
+
+
+        <!-- =========================================================
+              DO NOT DELETE. needed for clipboard action.  -->
+        <textarea id="txtarea-clipboard" name="" rows="4"></textarea>
+        <!--=========================================================-->
+
+
+        <div class="end">
+            <a href="https://vishseen.github.io/home" target="_blank">
+            Fin du document.
+            </a>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="block-content">
+            <button id="btn-cancel">
+            Annuler
+            </button>
+            <button id="btn-done">
+            Terminer
+            </button>
+        </div>
+    </footer>
+    <script src="js/popup.js"></script>
+</body>
+
+</html>

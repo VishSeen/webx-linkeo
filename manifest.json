@@ -1,0 +1,24 @@
+{
+    "name": "Linkeo",
+    "description": "A facilité les commentaires 'boilerplate' sur Jira.",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "permissions": ["activeTab", "storage", "tabs"],
+    "icons": {
+        "16": "img/favicon/favicon-16.png",
+        "32": "img/favicon/favicon-32.png",
+        "48": "img/favicon/favicon-48.png",
+        "128": "img/favicon/favicon-128.png"
+    },
+    "browser_action": {},
+    "background": {
+        "persistent": false,
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": ["content.js"]
+    }]
+}
