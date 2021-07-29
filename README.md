@@ -16,5 +16,6 @@ Due to more than 150 lines of text to add as a comment in Jira, I developed this
 
 
 ### Design:
+Straight forward design for quick use.
 
 ![main](https://user-images.githubusercontent.com/13452864/127562481-004bb647-d894-4136-9746-1da2faea13bb.png)
